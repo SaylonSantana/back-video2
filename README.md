@@ -24,6 +24,19 @@ Projeto backend em Java com Spring Boot para gerenciamento simples de usuários 
 2. Configure as credenciais no arquivo `src/main/resources/application.properties`.
 3. Execute o projeto:
 
+VIDEO UTILIZADO
+
+6. JAVA com SPRING BOOT do ZERO | LOGIN E CADASTRO [GUIA PRÁTICO]
+Tácio | Dev para Iniciantes
+https://www.youtube.com/watch?v=BhQBW_fGcX0
+
+
+FEITO POR
+
+👨‍💻 Saylon 
+
+
+
 ```bash
 mvn spring-boot:run
 Ou execute a classe principal:
@@ -51,3 +64,7 @@ Sinta-se à vontade para abrir issues e pull requests!
 
 Licença
 MIT License
+
+
+
+
