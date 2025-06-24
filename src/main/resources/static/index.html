@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8" />
+    <title>Cadastro</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f3f3f3;
+            display: flex;
+            height: 100vh;
+            justify-content: center;
+            align-items: center;
+        }
+        .cadastro-container {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0,0,0,0.2);
+            width: 320px;
+        }
+        input, button {
+            width: 100%;
+            padding: 10px;
+            margin: 8px 0;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+        button {
+            background: #007BFF;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        #errorMessage {
+            color: red;
+            text-align: center;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="cadastro-container">
+        <h2>Cadastro</h2>
+        <form id="cadastroForm" method="post" action="/cadastroUsuario">
+            <input type="text" id="nome" name="nome" placeholder="Nome" />
+            <input type="email" id="email" name="email" placeholder="Email" />
+            <input type="password" id="senha" name="senha" placeholder="Senha" />
+            <button type="submit">Cadastrar</button>
+            <p id="errorMessage"></p>
+        </form>
+    </div>
+
+    <script>
+        document.getElementById("cadastroForm").addEventListener("submit", function(event) {
+            const nome = document.getElementById("nome").value;
+            const email = document.getElementById("email").value;
+            const senha = document.getElementById("senha").value;
+            const error = document.getElementById("errorMessage");
+
+            if (nome === "" || email === "" || senha === "") {
+                event.preventDefault();  
+                error.textContent = "Preencha todos os campos!";
+            } else {
+                error.textContent = "";
+            }
+        });
+    </script>
+</body>
+</html>
